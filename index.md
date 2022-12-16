@@ -10,32 +10,30 @@ import CyberBook
 dr = CyberBook.DecoderRing(data='test')
 
 print(
-    "[*] Encode:\n",
+    # Encode using Hex
     f"Hex encoded: \t\t{dr.hex()}",
+
+    # Encode using Base64
     f"Base64 encoded: \t{dr.base64()}",
-    "\n[*] Accessing Data:\n",
+
+    # Access data and altered_data
     f"Initial input: \t\t{dr.data}",
     f"Encrypted string: \t{dr.altered_data}",
-    "\n[*] Decode:\n",
+
+    # Decode Base64
     f"Base64 decoded: \t{dr.base64(decode=True)}",
+
+    # Decode Hex
     f"Hex decoded: \t\t{dr.hex(decode=True)}",
     sep='\n'
 )
 ```
 Expected Output:
 ```commandline
-[*] Encode:
-
 Hex encoded: 		74657374
 Base64 encoded: 	NzQ2NTczNzQ=
-
-[*] Accessing Data:
-
 Initial input: 		test
 Encrypted string: 	NzQ2NTczNzQ=
-
-[*] Decode:
-
 Base64 decoded: 	74657374
 Hex decoded: 		test
 ```
