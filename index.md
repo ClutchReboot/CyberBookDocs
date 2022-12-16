@@ -1,5 +1,2 @@
-<html>
-<header>
-CyberBook
-</header>
-<html>
+# CyberBook Docs
+Hopefully, this will prove fruitful.
