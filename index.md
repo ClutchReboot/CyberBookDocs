@@ -37,3 +37,22 @@ Encrypted string: 	NzQ2NTczNzQ=
 Base64 decoded: 	74657374
 Hex decoded: 		test
 ```
+
+### Summon Circle Example
+This is mainly used as a Listener for reverse shells or a quick way to automate TCP responses.
+The following is a Listener that should work with a netcat reverse shell.
+```python
+import CyberBook
+
+
+sc = CyberBook.SummoningCircle()
+sc.start()
+
+while sc.server:
+    command = input("~$ ")
+    if command == 'exit':
+        sc.close()
+    else:
+        sc.send_recv(data=command)
+```
+By default, the listener will listen to any IP on the host system and port 5000.
