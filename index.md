@@ -7,33 +7,27 @@ The purpose of DecoderRing is to encode / decode a string easily.
 import CyberBook
 
 # DecoderRing Usage
-dr = CyberBook.DecoderRing(data='test')
+dr = CyberBook.DecoderRing
 
 print(
     # Encode using Hex
-    f"Hex encoded: \t\t{dr.hex()}",
+    f"Hex encoded: \t\t{dr.basic_hex(data='test')}",
 
     # Encode using Base64
-    f"Base64 encoded: \t{dr.base64()}",
-
-    # Access data and altered_data
-    f"Initial input: \t\t{dr.data}",
-    f"Encrypted string: \t{dr.altered_data}",
+    f"Base64 encoded: \t{dr.base64(data='test')}",
 
     # Decode Base64
-    f"Base64 decoded: \t{dr.base64(decode=True)}",
+    f"Base64 decoded: \t{dr.base64(data='NzQ2NTczNzQ=', decode=True)}",
 
     # Decode Hex
-    f"Hex decoded: \t\t{dr.hex(decode=True)}",
+    f"Hex decoded: \t\t{dr.basic_hex(data='74657374', decode=True)}",
     sep='\n'
 )
 ```
 Expected Output:
 ```commandline
 Hex encoded: 		74657374
-Base64 encoded: 	NzQ2NTczNzQ=
-Initial input: 		test
-Encrypted string: 	NzQ2NTczNzQ=
+Base64 encoded: 	dGVzdA==
 Base64 decoded: 	74657374
 Hex decoded: 		test
 ```
