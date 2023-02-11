@@ -1,15 +1,6 @@
 ## Purpose
 This is a collection of functions / tools that are used frequently enough to store them some place.
 
-{% for item in site.data.navigation.toc %}
-    <h3>{{ item.title }}</h3>
-      <ul>
-        {% for entry in item.subfolderitems %}
-          <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
-        {% endfor %}
-      </ul>
-  {% endfor %}
-
 ### DecoderRing Example
 The purpose of DecoderRing is to encode / decode a string easily.
 ```python
