@@ -8,11 +8,17 @@ title: CyberBookDocs
   <title>{{ page.title }}</title>
 </head>
 
-{% assign doclist = site.data.navigation.docs %}
-<ol>
-{% for item in doclist %}
-    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-{% endfor %}
-</ol>
+<body>
+
+<div class="sidenav">
+  {% assign doclist = site.data.navigation.docs %}
+
+  {% for item in doclist %}
+    {{ item }}
+  {% endfor %}
+
+</div>
+
+</body>
 
 </html>
