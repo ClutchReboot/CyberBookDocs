@@ -15,7 +15,10 @@ title: CyberBookDocs
   {% assign doclist = site.data.navigation.toc %}
 
   {% for item in doclist %}
-    {{ item.title }}
+    <h2>{{ item.title }}</h2>
+    {% for entry in item.subfolderitems %}
+      <a href="{{ entry.url }}">{{ entry.page }}</a>
+    {% endfor %}
   {% endfor %}
 
 </div>
