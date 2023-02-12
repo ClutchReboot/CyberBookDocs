@@ -9,7 +9,7 @@ title: CyberBookDocs
   <title>{{title}}</title>
 </head>
 
-{% assign doclist = site.data.navigation.docs | sort: 'title'  %}
+{% assign doclist = site.data.navigation.docs %}
 <ol>
 {% for item in doclist %}
     <li><a href="{{ item.url }}">{{ item.title }}</a></li>
