@@ -6,7 +6,7 @@ title: CyberBookDocs
 <html>
 <head>
   <meta charset="utf-8">
-  <title>{% block title %}Main Page{% endblock %}</title>
+  <title>{{title}}</title>
 </head>
 
 {% assign doclist = site.data.navigation.docs | sort: 'title'  %}
