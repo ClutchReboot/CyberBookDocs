@@ -2,8 +2,8 @@ toc:
   - title: CyberBook Documentation
     subfolderitems:
       - page: Main
-        url: /index.md
+        url: /documentation/cyberbook.md
   - title: Misc
     subfolderitems:
       - page: SecLists
-        url: /seclist_install.md
+        url: /documentation/seclist_install.md

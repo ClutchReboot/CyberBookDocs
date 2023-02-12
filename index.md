@@ -1,3 +1,13 @@
+---
+title: CyberBookDocs
+---
+<h2>{{ site.data.navigation.docs_list_title }}</h2>
+<ul>
+   {% for item in site.data.samplelist.docs %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+   {% endfor %}
+</ul>
+
 ## Purpose
 This is a collection of functions / tools that are used frequently enough to store them some place.
 
